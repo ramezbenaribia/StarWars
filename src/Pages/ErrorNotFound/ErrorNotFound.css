@@ -1,0 +1,5 @@
+body {
+  background-image: url('./assets/images/404.png') !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

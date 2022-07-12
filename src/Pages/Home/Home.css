@@ -1,0 +1,26 @@
+.container {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.css-k008qs {
+  margin-top: 20vh;
+  justify-content: center;
+}
+.css-18lrjg1-MuiCircularProgress-root {
+  color: #c8b711 !important;
+}
+.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+  background-color: #c8b711 !important;
+}
+.css-1oj2twp-MuiPagination-root {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+.css-1q1u3t4-MuiTableRow-root{
+  cursor: pointer;
+}
+.css-1q1u3t4-MuiTableRow-root:hover{
+  background-color: #c8b611a5 !important ;
+
+}
