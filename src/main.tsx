@@ -7,6 +7,8 @@ import getUserLocale from 'get-user-locale';
 
 
 const userLocale = getUserLocale();
+localStorage.setItem("page", "1")
+
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

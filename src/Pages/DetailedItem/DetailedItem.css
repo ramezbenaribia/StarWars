@@ -1,0 +1,20 @@
+.css-pwngrv-MuiPaper-root-MuiCard-root{
+    box-shadow: -1px 3px 8px 2px #c7b816 !important;
+}
+.card_content{
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.key{
+    color: #000000;
+    font-weight: bold;
+}
+h1{
+    text-align: center;
+    margin:auto;
+}
+.back_link{
+    display: flex;
+    text-decoration: none;
+    color: #979d0f;
+}

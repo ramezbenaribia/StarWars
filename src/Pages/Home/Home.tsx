@@ -11,8 +11,8 @@ import './Home.css'
 import styled from '@emotion/styled';
 import useSWR from 'swr'
 import { columns, Data } from './Models';
-import { FormattedDate, FormattedNumber, useIntl } from 'react-intl';
-
+import { FormattedDate, FormattedNumber } from 'react-intl';
+import { useNavigate } from "react-router-dom";
 
 
 const StyledTableCell = styled(TableCell)(() => ({
@@ -32,15 +32,19 @@ const fetcher = (url: string) => fetch(url).then(
 
 
 const Home = () => {
-  const [page, setPage] = useState(1);
+  const latestPage = Number(JSON.parse(localStorage.getItem('page') || ""))
+
+  const [page, setPage] = useState(latestPage);
   const { data, error } = useSWR(`https://swapi.dev/api/starships/?page=${page}`, fetcher)
 
   const handleChangePage = (event: unknown, newPage: number) => {
     setPage(newPage);
   };
-
+  let navigate = useNavigate();
   const handleSelectedRow = (row: Data) => {
-    console.log(row)
+    localStorage.setItem("starship", JSON.stringify(row))
+    localStorage.setItem("page", page.toString())
+    navigate("/detailed_item", { replace: true });
   };
 
 
