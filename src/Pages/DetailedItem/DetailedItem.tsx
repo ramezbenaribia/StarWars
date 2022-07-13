@@ -15,7 +15,6 @@ const DetailedItem = () => {
         'hyperdrive_rating',
         'starship_class',
         'url'
-
     ]
     const Dated_Attributes: string[] = [
         'created',
@@ -44,19 +43,11 @@ const DetailedItem = () => {
                         <NavLink to="/" className="back_link" >
                             <ArrowBackIcon className='NPicon' />
                             Back
-
                         </NavLink>
-
-
-
                         <h1>
                             {row.name}
                         </h1>
-
                         {keys.map((item) =>
-
-
-
                             <div key={item} className="card_content"  >
                                 {Array_Attributes.includes(item) &&
                                     <>

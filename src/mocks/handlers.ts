@@ -6,6 +6,7 @@ export const handlers = [
 
         return res(
             ctx.status(200),
+            ctx.delay(100),
             ctx.json({
 
                 "count": 36,

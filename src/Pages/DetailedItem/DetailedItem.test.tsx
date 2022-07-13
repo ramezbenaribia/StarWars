@@ -1,8 +1,8 @@
 import { IntlProvider } from 'react-intl';
 import { BrowserRouter } from 'react-router-dom';
 import { describe, expect, it } from 'vitest'
+import { Data } from '../../Models/Data';
 import { render, screen } from '../../utils/test-utils'
-import { Data } from '../Home/Models';
 import DetailedItem from './DetailedItem';
 
 
@@ -42,8 +42,8 @@ describe("Detailed Item  tests", () => {
             </BrowserRouter>
         );
 
-        const starship = await screen.findByText("Death Star");
-        expect(starship).toBeVisible();
+        const starshipName = await screen.findByText("Death Star");
+        expect(starshipName).toBeVisible();
     });
 
 
