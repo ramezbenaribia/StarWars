@@ -37,10 +37,13 @@ const Home = () => {
   const [page, setPage] = useState(latestPage);
   const { data, error } = useSWR(`https://swapi.dev/api/starships/?page=${page}`, fetcher)
 
+
+
+  const navigate = useNavigate();
+
   const handleChangePage = (event: unknown, newPage: number) => {
     setPage(newPage);
   };
-  let navigate = useNavigate();
   const handleSelectedRow = (row: Data) => {
     localStorage.setItem("starship", JSON.stringify(row))
     localStorage.setItem("page", page.toString())
@@ -93,7 +96,10 @@ const Home = () => {
                                 value={value}
                               />
                             }
-                            {column.format === 'number' &&
+                            {column.format === 'number' && value === 'unknown' &&
+                              value
+                            }
+                            {column.format === 'number' && value != 'unknown' &&
                               < FormattedNumber value={Number(value)} />
                             }
 

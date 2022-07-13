@@ -5,9 +5,8 @@ import App from './App'
 import './index.css'
 import getUserLocale from 'get-user-locale';
 
-
 const userLocale = getUserLocale();
-localStorage.setItem("page", "1")
+localStorage.setItem("page", "1");
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

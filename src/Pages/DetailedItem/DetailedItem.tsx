@@ -63,9 +63,9 @@ const DetailedItem = () => {
                                         <span className='key' >
                                             {item}:
                                         </span>
-                                        {row[item].map((one: string) =>
-                                            <div>
-                                                • {one}
+                                        {row[item].map((object: string) =>
+                                            <div key={item} >
+                                                • {object}
                                             </div>
 
                                         )}
