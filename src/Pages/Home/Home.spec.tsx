@@ -33,8 +33,8 @@ describe("Home Page tests", () => {
   });
 
   it("the table should have an item with the name 'Star Wars Test' ", async () => {
-    const todoItem = await screen.findByText("Star Wars Test");
-    expect(todoItem).toBeVisible();
+    const firstRowName = await screen.findByText("Star Wars Test");
+    expect(firstRowName).toBeVisible();
   });
 
 })
