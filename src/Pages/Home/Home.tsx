@@ -63,7 +63,7 @@ const Home = () => {
   return (
     <Container className='container' >
 
-      {!data && !error ? <div> <Box sx={{ display: 'flex' }} data-testid="loading">
+      {!data ? <div> <Box sx={{ display: 'flex' }} data-testid="loading">
         <CircularProgress size='30vh' />
       </Box></div> : null}
 
